@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie App</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Optional: Customize Tailwind for dark mode toggle -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1f2937', // Gray-800
+          },
+        },
+      },
+    };
+  </script>
+  <!-- Custom CSS (optional) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen">
+  <!-- Header -->
+  <header class="p-4 bg-gray-100 dark:bg-gray-800 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">🎬 Movix360</h1>
+    <button id="toggle-dark" class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded">Toggle Dark Mode</button>
+  </header>
+
+  <!-- Search Bar -->
+  <div class="p-4">
+    <input
+      id="search-input"
+      type="text"
+      placeholder="Search for a movie..."
+      class="w-full p-2 rounded bg-gray-200 dark:bg-gray-700 focus:outline-none"
+    />
+  </div>
+
+  <!-- Genre Filters (placeholder) -->
+  <div id="genre-filters" class="flex flex-wrap gap-2 px-4 pb-2">
+    <!-- Genre buttons will be inserted here dynamically -->
+  </div>
+
+  <div id="spinner" class="text-center my-6 hidden">
+  <svg class="animate-spin h-8 w-8 text-blue-600 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+  </svg>
+  <p class="mt-2 text-gray-500 dark:text-gray-400">Loading...</p>
+</div>
+
+
+  <!-- Movie Grid -->
+  <main class="p-4">
+    <h2 class="text-xl mb-4 font-semibold">Popular Movies</h2>
+    <div id="movie-grid" class="grid gap-4 grid-cols-2 md:grid-cols-4">
+      <!-- Movies will be rendered here -->
+    </div>
+
+    <!-- Load More Button -->
+    <div class="text-center mt-6">
+      <button
+        id="load-more"
+        class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+      >
+        Load More
+      </button>
+    </div>
+  </main>
+
+  <!-- Script -->
+   <script src="js/config.js"></script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>
+
+
+

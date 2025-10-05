@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Details</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    };
+  </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen">
+  <!-- Header -->
+  <header class="p-4 bg-gray-100 dark:bg-gray-800 flex justify-between items-center">
+    <h1 class="text-xl font-bold">🎬 Movie Details</h1>
+    <a href="index.html" class="text-blue-500 hover:underline">← Back to Home</a>
+  </header>
+
+  <!-- Movie Details Section -->
+  <main id="movie-details" class="p-4 flex flex-col md:flex-row gap-6">
+    <!-- Content will be populated via JS -->
+  </main>
+ <script src="js/config.js"></script>
+  <script src="js/movie.js">
+  </script>
+</body>
+</html>
